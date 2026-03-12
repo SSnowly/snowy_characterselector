@@ -1,0 +1,38 @@
+{
+    "selector": {
+        "menu_title": "Character",
+        "load_character": "Load character",
+        "delete_character": "Delete character",
+        "create_new": "Create new character",
+        "delete_confirm_header": "Are you sure you want to delete your character?",
+        "delete_confirm_content": "Deleting your character will permanently remove them and everything associated. Import cars can be transferred to any other character!\n\nSelected character: %s",
+        "delete_confirm_btn": "Delete character",
+        "cancel": "Cancel",
+        "unknown_zone": "—",
+        "delete_error_date": "You can delete your character at earliest on %s",
+        "delete_error_title": "Character deletion",
+        "citizen_id": "Citizen ID",
+        "total_money": "Total Money",
+        "cash": "Cash",
+        "bank": "Bank",
+        "slot_locked": "Slot Locked",
+        "slot_locked_desc": "You have reached your maximum character limit."
+    },
+    "creator": {
+        "gender_title": "Choose your gender",
+        "male": "Male",
+        "female": "Female",
+        "cancel": "Cancel",
+        "name_title": "Character creation",
+        "firstname_label": "First name",
+        "firstname_placeholder": "Enter first name...",
+        "lastname_label": "Last name",
+        "lastname_placeholder": "Enter last name...",
+        "birthday_title": "Birth date",
+        "birthday_label": "Birth date",
+        "nationality_title": "Nationality",
+        "nationality_label": "Select your nationality",
+        "success_title": "Character",
+        "success_description": "You have successfully created your new character"
+    }
+}

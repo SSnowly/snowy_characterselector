@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        * { margin: 0; padding: 0; }
+        html, body {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            pointer-events: all;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        (function() {
+            var resourceName = (typeof GetParentResourceName === 'function' && GetParentResourceName()) || 'snowy_characterselector';
+            var reportUrl = 'https://' + resourceName + '/main:mouse_event';
+
+            function reportMouseEvent(eventType, event) {
+                fetch(reportUrl, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        type: eventType,
+                        x: event.clientX / window.innerWidth,
+                        y: event.clientY / window.innerHeight
+                    })
+                }).catch(function() {});
+            }
+
+            document.addEventListener('mousemove', function(e) {
+                reportMouseEvent('move', e);
+            });
+
+            document.addEventListener('click', function(e) {
+                reportMouseEvent('click', e);
+            });
+        })();
+    </script>
+</body>
+</html>
