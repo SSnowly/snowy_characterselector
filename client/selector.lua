@@ -20,7 +20,6 @@ local function createLocalPed(model, coords, heading)
     local hash = type(model) == 'string' and joaat(model) or model
     local x, y, z = coords.x, coords.y, coords.z
     local ped = CreatePed(1, hash, x, y, z, heading or 0.0, false, false)
-    SetEntityAsNoLongerNeeded(ped)
     return ped
 end
 
@@ -66,6 +65,7 @@ local function selectorCreatePed(id, data)
     SetEntityCoords(ped, cfg.coords.x, cfg.coords.y, cfg.coords.z, false, false, false, false)
     SetEntityHeading(ped, cfg.heading)
     SetEntityInvincible(ped, false)
+    SetModelAsNoLongerNeeded(convertPed)
     if not empty then
         if Config.framework == 'qbx_core' then
             if data.skin and next(data.skin) then
@@ -85,10 +85,12 @@ local function selectorCreatePed(id, data)
 
             lib.requestAnimDict(cfg.animation.dict)
             TaskPlayAnimAdvanced(ped, cfg.animation.dict, cfg.animation.name, cfg.coords.x, cfg.coords.y, cfg.coords.z, 0.0, 0.0, cfg.heading, 8.0, 1.0, -1, 2, 0)
+            RemoveAnimDict(cfg.animation.dict)
         end
     else
         lib.requestAnimDict(cfg.animation.dict)
         TaskPlayAnimAdvanced(ped, cfg.animation.dict, cfg.animation.name, cfg.coords.x, cfg.coords.y, cfg.coords.z, 0.0, 0.0, cfg.heading, 8.0, 1.0, -1, 2, 0)
+        RemoveAnimDict(cfg.animation.dict)
     end
 
     Data.selector.characters[id].ped = ped

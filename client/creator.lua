@@ -42,6 +42,7 @@ local function creatorCreatePed(gender)
     SetEntityInvincible(ped, false)
     SetEntityAlpha(ped, 255, false)
     TaskStandStill(ped, -1)
+    SetModelAsNoLongerNeeded(cfg.gender[gender].model)
     Data.creator.ped = ped
 end
 
