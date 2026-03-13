@@ -178,6 +178,7 @@ function Selector.Setup(characters, existingCamera)
     end
 
     DisplayRadar(false)
+    ShutdownLoadingScreen()
     ShutdownLoadingScreenNui()
     DoScreenFadeIn(1000)
     SetNuiFocus(true, true)

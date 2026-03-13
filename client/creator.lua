@@ -298,7 +298,6 @@ local function creatorFlow()
         birthday = birthdayTs,
         nationality = Data.creator.nationality,
     })
-
 end
 
 ---@param existingCamera? number Reuse existing camera
