@@ -1,0 +1,38 @@
+{
+    "selector": {
+        "menu_title": "Postava",
+        "load_character": "Zvolit postavu",
+        "delete_character": "Smazat postavu",
+        "create_new": "Vytvořit novou postavu",
+        "delete_confirm_header": "Opravdu chcete smazat svou postavu?",
+        "delete_confirm_content": "Smazáním své postavy ji trvale odstraníš spolu se vším, co s ní souvisí.\n\nVybraná postava: %s",
+        "delete_confirm_btn": "Smazat postavu",
+        "cancel": "Zrušit",
+        "unknown_zone": "—",
+        "delete_error_date": "Svou postavu můžeš smazat nejdříve %s",
+        "delete_error_title": "Smazání postavy",
+        "citizen_id": "Občanské číslo",
+        "total_money": "Finance",
+        "cash": "Hotovost",
+        "bank": "Bankovní účet",
+        "slot_locked": "Slot uzamčen",
+        "slot_locked_desc": "Dosáhl jste limitu postav."
+    },
+    "creator": {
+        "gender_title": "Vyberte si pohlaví",
+        "male": "Muž",
+        "female": "Žena",
+        "cancel": "Zrušit",
+        "name_title": "Tvorba postavy",
+        "firstname_label": "Jméno",
+        "firstname_placeholder": "Vložte vaše jméno...",
+        "lastname_label": "Příjmení",
+        "lastname_placeholder": "Vložte vaše příjmení...",
+        "birthday_title": "Datum narození",
+        "birthday_label": "Datum narození",
+        "nationality_title": "Národnost",
+        "nationality_label": "Vyberte svou národnost",
+        "success_title": "Postava",
+        "success_description": "Úspešně jste si vytvořil novou postavu"
+    }
+}
